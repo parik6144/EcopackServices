@@ -1,0 +1,352 @@
+/* assets/css/employee/employee_form.css */
+
+.emp-profile-container {
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+	padding: 18px 10px;
+	margin: 24px auto 24px auto;
+	max-width: 1200px;
+}
+.emp-profile-container h2 {
+	font-weight: 600;
+	margin-bottom: 18px;
+	letter-spacing: 0.5px;
+	font-size: 1.3rem;
+}
+/* Updated nav-link styling for MAIN TABS */
+#mainTab > .nav-item > .nav-link {
+	background: linear-gradient(90deg, #0d47a1, #1976d2) !important; /* Professional blue for inactive main tabs */
+	color: #fff !important;
+	border-radius: 8px 8px 0 0 !important;
+	padding: 7px 16px !important;
+	font-weight: 500 !important;
+	font-size: 1rem !important;
+	margin-right: 2px !important;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.04) !important;
+	border: none !important;
+	transition: background 0.2s, color 0.2s !important;
+	cursor: pointer !important;
+	opacity: 0.92 !important;
+	min-width: 80px !important;
+}
+#mainTab > .nav-item > .nav-link.active,
+#mainTab > .nav-item > .nav-link:hover {
+	background: linear-gradient(90deg, #f57c00, #ff9800) !important; /* Vibrant orange for active/hover, matches child tab */
+	color: #fff !important;
+	opacity: 1 !important;
+	box-shadow: 0 2px 8px rgba(245, 124, 0, 0.2) !important;
+}
+
+/* --- Sub-tab specific styling --- */
+#personalSubTab .nav-item .nav-link {
+	background: linear-gradient(90deg, #6c757d, #9098a1); /* Neutral grey for inactive sub-tabs */
+	font-size: 0.88rem; /* Smaller font size */
+	padding: 6px 14px; /* Smaller padding */
+	font-weight: 500;
+	opacity: 0.9;
+	color: #fff; /* White text for better contrast on grey */
+}
+
+#personalSubTab .nav-item .nav-link.active,
+#personalSubTab .nav-item .nav-link:hover {
+	background: linear-gradient(90deg, #f57c00, #ff9800); /* Vibrant orange for active/hover */
+	font-weight: 600;
+	opacity: 1;
+	color: #fff; /* Ensure text is white on active */
+}
+
+.tab-content {
+	margin-top: 10px;
+}
+.form-group {
+	position: relative;
+	margin-bottom: 12px;
+}
+.form-control {
+	border-radius: 6px;
+	border: 1px solid #e0e0e0;
+	padding: 8px 8px 4px 8px; /* Adjusted padding to ensure text doesn't hide behind label */
+	font-size: 1rem;
+	background: #fafbfc;
+	transition: border 0.2s, box-shadow 0.2s;
+	height: 38px;
+	min-height: 38px;
+}
+.form-control:focus {
+	border-color: #1976d2;
+	box-shadow: 0 0 0 1.5px #1976d220;
+	background: #fff;
+}
+/* Style for invalid input */
+.form-control.is-invalid {
+	border-color: #dc3545;
+	padding-right: calc(1.5em + 0.75rem); /* Ensure space for feedback icon */
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right calc(0.375em + 0.1875rem) center;
+	background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.form-group label {
+	position: absolute;
+	top: 7px; /* Adjusted to initial position for label */
+	left: 12px;
+	font-size: 0.97rem;
+	color: #888;
+	background: transparent;
+	pointer-events: none;
+	transition: 0.2s;
+	padding: 0 2px;
+	z-index: 1; /* Ensure label is above input when not focused/filled */
+	font-weight: 500;
+	margin-bottom: 2px;
+}
+/* Floating label effect */
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label,
+.form-control.filled + label { /* Added filled for autofill */
+	top: -10px; /* Moves label up */
+	left: 8px; /* Moves label slightly left */
+	font-size: 0.89rem;
+	color: #1976d2;
+	background: #fff; /* Background to prevent text bleeding through */
+	padding: 0 4px;
+	z-index: 2; /* Keep label above input text */
+}
+
+/* Important: Hide placeholders when label is floated to prevent overlap */
+.form-control::-webkit-input-placeholder {
+	color: transparent;
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+	color: transparent;
+}
+.form-control::-moz-placeholder {  /* Firefox 19+ */
+	color: transparent;
+}
+.form-control:-ms-input-placeholder {
+	color: transparent;
+}
+.form-control.is-invalid + label { /* Ensure label stays correctly styled for invalid floating labels */
+	color: #dc3545 !important; /* Keep error color */
+}
+
+
+.form-error {
+	color: #d32f2f;
+	font-size: 0.89rem;
+	margin-top: 1px;
+	margin-left: 1px;
+	font-weight: 400;
+}
+.section-heading {
+	font-weight: 600;
+	font-size: 1.01rem;
+	margin: 18px 0 8px 0;
+	color: #1976d2;
+}
+.btn-success, .btn-info, .btn-warning { /* Added .btn-warning */
+	border-radius: 6px;
+	padding: 7px 18px;
+	font-weight: 500;
+	font-size: 1rem;
+	box-shadow: 0 1px 4px rgba(0,150,136,0.07);
+	border: none;
+	transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-success:hover {
+	background: linear-gradient(90deg, #1976d2 60%, #009688 100%);
+	color: #fff;
+	box-shadow: 0 2px 8px rgba(0,150,136,0.10);
+}
+.btn-info {
+	background: linear-gradient(90deg, #1976d2 60%, #009688 100%);
+	color: #fff;
+}
+.btn-info:hover {
+	background: linear-gradient(90deg, #009688 60%, #1976d2 100%);
+	color: #fff;
+	box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+}
+.btn-warning { /* Styling for Reset button */
+	background: linear-gradient(90deg, #ffc107 60%, #ff8c00 100%);
+	color: #333;
+}
+.btn-warning:hover {
+	background: linear-gradient(90deg, #ff8c00 60%, #ffc107 100%);
+	color: #333;
+	box-shadow: 0 2px 8px rgba(255, 193, 7, 0.10);
+}
+
+.alert {
+	border-radius: 6px;
+	font-size: 0.98rem;
+	margin-bottom: 12px;
+	box-shadow: 0 1px 4px rgba(25, 118, 210, 0.04);
+}
+.form-row {
+	margin-bottom: 6px;
+}
+@media (max-width: 768px) {
+	.emp-profile-container {
+		padding: 6px 1px;
+	}
+	.nav-tabs .nav-item .nav-link { /* Adjusted for Bootstrap nav-link */
+		padding: 5px 5px;
+		font-size: 0.93rem;
+	}
+}
+.nav-pills .nav-link {
+	background-color: #e9ecef;
+	color: #495057;
+	margin-right: 5px;
+	border-radius: 5px;
+}
+.nav-pills .nav-link.active {
+	background-color: #007bff;
+	color: #fff;
+}
+
+/* Photo Upload Styling */
+.photo-upload-container {
+	border: 2px dashed #ccc;
+	border-radius: 8px;
+	padding: 18px;
+	text-align: center;
+	background: #fafafa;
+	margin-bottom: 10px;
+	min-height: 140px;
+	position: relative;
+	display: flex; /* Use flexbox for centering content */
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer; /* Indicate clickable area */
+}
+.photo-upload-container.drag-over {
+	border-color: #1976d2;
+	background-color: #e6f7ff;
+}
+/* Hide native file input */
+.photo-upload-container input[type="file"] {
+	display: none;
+}
+.photo-upload-container .photo-upload-icon {
+	color: #888;
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+}
+.photo-upload-container .photo-upload-text {
+	color: #888;
+	font-size: 0.95rem;
+}
+
+/* Photo Preview Frame */
+.photo-preview-frame {
+	width: 150px; /* Fixed size for the frame */
+	height: 150px;
+	border: 2px solid #eee;
+	border-radius: 50%; /* Circular frame */
+	overflow: hidden; /* Hide overflow outside the circle */
+	margin: 10px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	position: relative; /* For positioning buttons */
+}
+.photo-preview-frame img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* Crop image to fit circle */
+}
+
+/* Photo action buttons */
+.photo-actions {
+	margin-top: 10px;
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+
+/* Individual remove button for preview frame */
+.remove-photo-btn-overlay {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: rgba(255, 255, 255, 0.8);
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	color: #d32f2f;
+	cursor: pointer;
+	z-index: 10;
+	transition: background 0.2s ease;
+}
+.remove-photo-btn-overlay:hover {
+	background: #d32f2f;
+	color: #fff;
+}
+
+/* General styling adjustments from image */
+.emp-profile-heading {
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #222;
+}
+.form-group label {
+	font-weight: 500;
+	margin-bottom: 2px;
+}
+.form-control {
+	height: 38px;
+	font-size: 1rem;
+	border-radius: 6px;
+}
+
+/* Reduce legend font size as requested */
+fieldset.fieldset-border > legend.fieldset-border {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #d32f2f; /* Changed to red */
+}
+
+.form-label-blue {
+	font-size: 13px;
+	color: #007bff;
+	font-weight: 500;
+	margin-bottom: 2px;
+}
+.form-group .form-label {
+	display: block;
+	margin-bottom: 4px;
+}
+.radio-group {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	margin-top: 2px;
+}
+.radio-group .radio-inline {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	font-weight: 500;
+	color: #333;
+	margin-right: 10px;
+}
+.radio-inline input[type="radio"] {
+	margin-right: 5px;
+	transform: scale(1.2);
+}
+.form-error {
+	margin-top: 2px;
+	font-size: 13px;
+}

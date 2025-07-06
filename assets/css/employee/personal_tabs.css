@@ -1,0 +1,25 @@
+/* assets/css/employee/personal_tabs.css */
+
+/*
+ * This file contains the specific styling for the sub-tabs
+ * within the "Personal" section of the employee form.
+ */
+
+/* --- Sub-tab specific styling --- */
+#personalSubTab .nav-item .nav-link {
+	background: linear-gradient(90deg, #6c757d, #9098a1) !important; /* Neutral grey for inactive sub-tabs */
+	font-size: 0.88rem !important; /* Smaller font size */
+	padding: 6px 14px !important; /* Smaller padding */
+	font-weight: 500 !important;
+	opacity: 0.9 !important;
+	color: #fff !important; /* White text for better contrast on grey */
+	border: none !important;
+}
+
+#personalSubTab .nav-item .nav-link.active,
+#personalSubTab .nav-item .nav-link:hover {
+	background: linear-gradient(90deg, #f57c00, #ff9800) !important; /* Vibrant orange for active/hover */
+	font-weight: 600 !important;
+	opacity: 1 !important;
+	color: #fff !important; /* Ensure text is white on active */
+} 

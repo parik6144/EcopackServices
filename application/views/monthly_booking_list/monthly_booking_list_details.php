@@ -1,0 +1,226 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: admin
+ * Date: 16/08/2017
+ * Time: 14:52
+ */
+
+$this->load->view('header');
+$this->load->view('left_sidebar');
+$this->load->view('topbar');
+?>
+<style type="text/css">
+
+.center_text{
+    text-align: center;
+    fort-weight:bold;
+}
+</style>
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Monthly Booking List</h2>
+        
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+<div class="col-lg-12">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Monthly booking Records</h5>
+            <div class="ibox-tools">
+                <a href="<?=base_url('monthly_booking_list/add')?>"><button class="btn btn-danger btn-circle btn-outline" id="btn_addrecord" type="button"><i class="fa fa-plus-circle"></i>
+                </button></a>
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-wrench"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="<?php echo site_url('monthly_booking_list/add')?>">Add Record</a>
+                    </li>
+
+                </ul>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+
+
+            <table class="table table-striped table-bordered table-hover dataTables-example" id="example">
+                <thead>
+                <tr role="row">
+                    <th>&nbsp;</th>
+                    <th>Party Name</th>
+                    <th>Type</th>
+                    <th>#</th>
+                    <th>Status</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $ctr=1;
+                    $currentmonth=date('m');
+                    $currentyear=date('Y');
+                     echo "<tr><td colspan='5' class='center_text'>Employee</td></tr>";
+                    foreach ($employee as $row) {
+                        echo "<tr>";
+                        echo "<td>".$ctr."</td>";
+                        $bookingmonth=$row['booking_date'];
+                        $year = date('Y', strtotime($row['booking_date']));
+                        $month = date('m', strtotime($row['booking_date']));
+                        echo "<td>".$row['name']->ref_name."</td>";
+                        echo "<td>".$row['name']->receiver_type."</td>";
+                        echo "<td><a href='#' refid='".encryptor("encrypt",$row['monthly_booking_id'])."' class='btn_deleterecord'><i class='fa fa-trash-o'></i></a></td>";
+                        if($currentmonth==$month && $currentyear==$year)
+                        {
+                            echo "<td><span style='color:green;font-size:20px;'>&#10003;</span></td>";
+                            
+                        }
+                        else
+                            echo '<td><i class="fa fa-close" style="font-size:25px;color:red"></i></td>';
+                        echo "</tr>";
+                        $ctr++;
+                    }
+                    echo "<tr><td colspan='5' class='center_text'>Transporter</td></tr>";
+                    foreach ($transporter as $row) {
+                        echo "<tr>";
+                        echo "<td>".$ctr."</td>";
+                        $bookingmonth=$row['booking_date'];
+                        $year = date('Y', strtotime($row['booking_date']));
+                        $month = date('m', strtotime($row['booking_date']));
+                        echo "<td>".$row['name']->ref_name."</td>";
+                        echo "<td>".$row['name']->receiver_type."</td>";
+                        echo "<td><a href='#' refid='".encryptor("encrypt",$row['monthly_booking_id'])."' class='btn_deleterecord'><i class='fa fa-trash-o'></i></a></td>";
+                        if($currentmonth==$month && $currentyear==$year)
+                        {
+                            echo "<td><span style='color:green;font-size:20px;'>&#10003;</span></td>";
+                            
+                        }
+                        else
+                            echo '<td><i class="fa fa-close" style="font-size:25px;color:red"></i></td>';
+                        echo "</tr>";
+                        $ctr++;
+                    }
+                    echo "<tr><td colspan='5' class='center_text'>Other Party</td></tr>";
+                    foreach ($other_party as $row) {
+                        echo "<tr>";
+                        echo "<td>".$ctr."</td>";
+                        $bookingmonth=$row['booking_date'];
+                        $year = date('Y', strtotime($row['booking_date']));
+                        $month = date('m', strtotime($row['booking_date']));
+                        echo "<td>".$row['name']->ref_name."</td>";
+                        echo "<td>".$row['name']->receiver_type."</td>";
+                        echo "<td><a href='#' refid='".encryptor("encrypt",$row['monthly_booking_id'])."' class='btn_deleterecord'><i class='fa fa-trash-o'></i></a></td>";
+                        if($currentmonth==$month && $currentyear==$year)
+                        {
+                            echo "<td><span style='color:green;font-size:20px;'>&#10003;</span></td>";
+                            
+                        }
+                        else
+                            echo '<td><i class="fa fa-close" style="font-size:25px;color:red"></i></td>';
+                        echo "</tr>";
+                        $ctr++;
+                    }
+                    ?>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+<?php
+$this->load->view('footer');
+?>
+<script src="<?php echo base_url() ?>assets/js/plugins/dataTables/datatables.min.js"></script>
+<script src="<?php echo base_url() ?>assets/js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        
+        $(document).on("click",".btn_editrecord",function () {
+
+            var  refid=$(this).attr('refid');
+            $.ajax({
+                type: 'GET',
+                url: '<?php echo site_url('monthly_booking_list/editpopup')?>',
+                cache: false,
+                async: false,
+                data: {popup:'popup',id:refid},
+                success: function (data) {
+                    $("#monthly_booking_list_modal_content").html(data);
+                    $("#monthly_booking_listModal").modal();
+
+                },
+                error: function (data) {
+                    // alert("error");
+                },
+                timeout: 5000,
+                error: function(jqXHR, textStatus, errorThrown) {
+                    swal("","Please check your internet connection.","error");
+                }
+            });
+        });
+
+        $(document).on("click",".btn_deleterecord",function (e) {
+            e.preventDefault();
+            var ref=$(this);
+            var refid=$(this).attr('refid');
+                swal({
+                title: "Are you sure?",
+                text: "You want to delete this post!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: 'btn-danger',
+                cancelButtonClass: 'btn-success',
+                confirmButtonText: 'Yes, delete it!',
+                closeOnConfirm: false
+                //closeOnCancel: false
+            },
+            function(){
+               
+                $.ajax({
+                    type: 'POST',
+                   url: '<?php echo site_url('monthly_booking_list/deleterecord')?>',
+                    cache: false,
+                    data: {delete: refid},
+                    success: function (data) {
+                        if(data=="true")
+                        {
+                            ref.closest("tr").hide("slow",function(){ ref.closest("tr").remove(); });
+                            swal("Deleted!", "Your record has been deleted!", "success");
+                        }
+                    },
+                    error: function (data) {
+                    },
+                timeout: 5000,
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        swal("","Please check your internet connection.","error");
+                        
+                    },
+                 beforeSend: function() {
+                     $('#loader').show();
+                  },
+                  complete: function(){
+                     $('#loader').hide();
+                  }
+                });
+            });
+        });
+
+    });
+    
+    $("#monthly_booking_listModal").on("hidden.bs.modal", function () {
+        $(".pagination .active").click();
+    });
+</script>

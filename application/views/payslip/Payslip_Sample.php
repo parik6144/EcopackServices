@@ -1,0 +1,599 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/uploads/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/uploads/favicon.ico" type="image/x-icon">
+
+    <title>Payslip Ecopack Services Pvt Ltd</title>
+
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- datatable css --->
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/plugins/dataTables/dataTables.min.css" rel="stylesheet">
+    <!-- <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/plugins/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet"> -->
+
+    <!-- Toastr style -->
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/animate.css" rel="stylesheet">
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/style.css" rel="stylesheet">
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/css/plugins/iCheck/custom.css" rel="stylesheet">
+
+    <style type="text/css">
+        div#loader {display: none; }
+        /* width */
+        ::-webkit-scrollbar {
+
+            -webkit-appearance: none;
+
+        }
+
+        ::-webkit-scrollbar:vertical {
+
+            width: 8px;
+
+        }
+
+        ::-webkit-scrollbar:horizontal {
+
+            height: 8px;
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+
+            background-color: rgba(0, 0, 0, .5);
+
+            border-radius: 10px;
+
+            border: 2px solid #ffffff;
+
+        }
+
+        ::-webkit-scrollbar-track {
+
+            border-radius: 10px;
+
+            background-color: #ffffff;
+
+        }
+
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-121810163-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-121810163-1');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5316538273200802",
+        enable_page_level_ads: true
+      });
+    </script-->
+
+</head>
+
+<body class="md-skin fixed-nav ">
+<div id="loader"></div>
+<div id="wrapper">
+
+
+
+
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu" style="display: block;">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                    <img alt="Ecopack" class="" src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/uploads/EcoPack1.png" style="width:100%;" />
+                    </div>
+                    <div class="logo-element">
+                        EcoPack
+                    </div>
+                </li>
+
+                <li class="" style='display:none;'>
+
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> Master<span class="fa arrow"></a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/branch" ><i class="fa fa-marker"></i>Branch</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/place" ><i class="fa fa-marker"></i>Place</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/consignee_billing"><i class="fa fa-envelope-open-o"></i>Billing Address Consigneee</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/consignee"><i class="fa fa-building-o"></i>Consignee</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/consignor"><i class="fa fa-building-o"></i>Consignor</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/warehouse"><i class="fa fa-building-o"></i>warehouse</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/orderno"><i class="fa fa-building-o"></i>Order No</a>
+                        </li>
+
+
+
+                    </ul>
+                </li>
+                <li class="" style='display:none;'>
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> HR<span class="fa arrow"></a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/employee"><i class="fa fa-user"></i>Staff</a>
+                        </li>
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/inwardemployee"><i class="fa fa-user"></i>Inward Employee</a>
+                        </li>
+
+                        <li>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/employee_type"><i class="fa fa-user"></i>Department</a>
+                        </li>
+
+                        <li>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/staff"><i class="fa fa-user"></i>Employee</a>
+                        </li>
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/employee_salary"><i class="fa fa-user"></i>Salary List</a>
+                        </li>
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/holiday"><i class="fa fa-user"></i>Holiday List</a>
+                        </li>
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/working_day"><i class="fa fa-user"></i>Other Working Day</a>
+                        </li>
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/advance_salary"><i class="fa fa-user"></i>Advance Salary</a>
+                        </li>
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/Attendance"><i class="fa fa-user"></i>Attendance</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="" >
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> Finance <span class="fa arrow"></a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/account"><i class="fa fa-building-o"></i>Account</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/invoicetype"><i class="fa fa-inventory"></i>Invoice Type</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/inwardrate"><i class="fa fa-inr"></i>Inward Rate</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/outwardrate"><i class="fa fa-inr"></i>Outward vehicle Rate</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/transport_invoice_rate"><i class="fa fa-inr"></i>Transport Invoice Rate</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/labor_invoice_rate"><i class="fa fa-inr"></i>Labor Invoice Rate</a>
+                        </li>
+                        <li>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/invoice"><i class="fa fa-car"></i>Invoice</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/expense_head"><i class="fa fa-inr"></i>Expense Head</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/payment_booking"><i class="fa fa-inr"></i>Expense Booking</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/booking_transfer"><i class="fa fa-inr"></i>Due Booking Payment</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/pending_advance"><i class="fa fa-arrow-up"></i>Advance Pending</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/pending_due"><i class="fa fa-arrow-up"></i>Due Pending</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/ledger"><i class="fa fa-arrow-up"></i>Ledger</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/invoice/getbookdebts"><i class="fa fa-arrow-up"></i>Bookdebts</a>
+                        </li>
+                        <li>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/receipt"><i class="fa fa-arrow-up"></i>Receipt</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/loan"><i class="fa fa-arrow-up"></i>Loan</a>
+                        </li>
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/loan_pending"><i class="fa fa-arrow-up"></i>Loan Booking Pending</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/tds"><i class="fa fa-arrow-up"></i>TDS</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="#"><i class="fa fa-bar-chart-o"></i>AMS<span class="fa arrow"></a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+
+                        <li>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/itemmaster"><i class="fa fa-inventory"></i>Ecopack Item Master</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/item"><i class="fa fa-inventory"></i>CO. Wise Item</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/rentitem"><i class="fa fa-inventory"></i>Rent Invoice Item</a>
+                        </li>
+                        <!-- <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/purchase_stock_item"><i class="fa fa-inventory"></i>Fixed Assets Item</a>
+                        </li> -->
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/rentwarehouse"><i class="fa fa-inventory"></i>Rent Ware House</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/stocktransfer"><i class="fa fa-inventory"></i>Stock Transfer</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/rentstocktransfer"><i class="fa fa-inventory"></i>Rent Stock Transfer</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/asign_rent_item"><i class="fa fa-inventory"></i>Assign Stock</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/asset_lost"><i class="fa fa-inventory"></i>Asset Lost/Damage</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="">
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> Operation<span class="fa arrow"></a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/vehicletype"><i class="fa fa-car"></i>Vehicle Type</a>
+                        </li>
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/inwardowner"><i class="fa fa-user"></i>Owner</a>
+                        </li>
+
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/vehicle_inward"><i class="fa fa-car"></i>Vehicle</a>
+                        </li>
+
+
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/inward"><i class="fa fa-download"></i>Inward</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/consignment"><i class="fa fa-arrow-up"></i>Consignment</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/pending_consignment"><i class="fa fa-arrow-up"></i>Consignment Pending</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/contactDetails"><i class="fa fa-building-o"></i>Contact Details</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/other_item"><i class="fa fa-building-o"></i>Other Item</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/other_item_stock"><i class="fa fa-building-o"></i>Other Item Stock</a>
+                        </li>
+
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/diesel_expense"><i class="fa fa-building-o"></i>Diesel Expense</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> Reports<span class="fa arrow"></a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/stock_report"><i class="fa fa-inventory"></i>Stock Report</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/co_stock_report"><i class="fa fa-inventory"></i>Rent Stock Report</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/item_wise_report"><i class="fa fa-inventory"></i>Item Wise Report</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/warehouse_wise_report"><i class="fa fa-inventory"></i>IDLE Stock</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/followup"><i class="fa fa-car"></i>Vehicle followup</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/followup_report"><i class="fa fa-car"></i>followup Report</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/driver_report"><i class="fa fa-car"></i>Driver Report</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/owner_report"><i class="fa fa-car"></i>Owner Report</a>
+                        </li>
+
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/employee_report"><i class="fa fa-car"></i>Employee Report</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/advance_payment"><i class="fa fa-arrow-up"></i>Advance Payment</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/due_payment"><i class="fa fa-arrow-up"></i>Due Payment</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/consignment_report"><i class="fa fa-arrow-up"></i>Consignment Record</a>
+                        </li>
+                        <li >
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/place_report"><i class="fa fa-arrow-up"></i>Place Report</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/invoice_report"><i class="fa fa-car"></i>Invoice</a>
+                        </li>
+                        <li style='display:none;'>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/gst_report"><i class="fa fa-car"></i>GST Report</a>
+                        </li>
+                    </ul>
+                </li>
+                <li >
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> Marketing<span class="fa arrow"></a>
+                    <ul class="nav nav-second-level collapse" aria-expanded="false" style="height: 0px;">
+                        <li>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/project"><i class="fa fa-building-o"></i>New Project</a>
+                        </li>
+                        <li>
+                            <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/project/ongoing"><i class="fa fa-building-o"></i>Ongoing Project</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="https://ecopackservices.com:2096/" target="_blank">Email Login</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+
+        <div class="row border-bottom">
+            <nav class="navbar navbar-fixed-top  " role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <span class="m-r-sm text-muted welcome-message">Welcome to Ecopack services PVT LTD.</span>
+                    </li>
+                    <li class="dropdown">
+
+
+                    <li>
+                        <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/logout">
+                            <i class="fa fa-sign-out"></i> Log out
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-8">
+                <h2>Payslip</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="192.168.0.11/2020/Jan/20-01-2020/Ecopack/">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <strong>Payslip</strong>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="title-action">
+                    <a href="#" target="_blank" class="btn btn-primary"><i class="fa fa-print"></i> Print Payslip </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="wrapper wrapper-content animated fadeInRight">
+                    <div class="ibox-content p-xl">
+
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <table style="width: 100%">
+                                    <tbody>
+                                    <tr>
+                                        <td class="text-center" colspan="12">
+                                            <h1 style="font-family: -webkit-body; font-size: 35px;">ECOPACK SERVICES PVT LTD</h1>
+                                            <p style="padding: 2px 10px; border: 1px solid; margin-bottom: 0; border-left: none; border-right: none; font-size: 18px;">
+                                                H.No-15A, A-Road,  Zone No : 1B, Birsanagar, Telco, Jamshedpur- 831019, Jharkhand<br>
+                                                Mobile : 9234565565,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-mail : saroj@ecopackservices.com  <br>
+                                                GSTIN : 20ABRTP6805A120,&nbsp;&nbsp;&nbsp;State-Code : 20</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-lg-2">
+                                <img src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/uploads/EcoPack.jpg" style="width: 165px; float: right;">
+                            </div>
+                        </div></br></br>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h5>From:</h5>
+                                <address>
+                                    <strong>Inspinia, Inc.</strong><br>
+                                    106 Jorg Avenu, 600/10<br>
+                                    Chicago, VT 32456<br>
+                                    <abbr title="Phone">P:</abbr> (123) 601-4590
+                                </address>
+                            </div>
+
+                            <div class="col-sm-6 text-right">
+                                <h4>Invoice No.</h4>
+                                <h4 class="text-navy">INV-000567F7-00</h4>
+                                <span>To:</span>
+                                <address>
+                                    <strong>Corporate, Inc.</strong><br>
+                                    112 Street Avenu, 1080<br>
+                                    Miami, CT 445611<br>
+                                    <abbr title="Phone">P:</abbr> (120) 9000-4321
+                                </address>
+                                <p>
+                                    <span><strong>Invoice Date:</strong> Marh 18, 2014</span><br>
+                                    <span><strong>Due Date:</strong> March 24, 2014</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive m-t">
+                            <table class="table invoice-table">
+                                <thead>
+                                <tr>
+                                    <th>Item List</th>
+                                    <th>Quantity</th>
+                                    <th>Unit Price</th>
+                                    <th>Tax</th>
+                                    <th>Total Price</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><div><strong>Admin Theme with psd project layouts</strong></div>
+                                        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></td>
+                                    <td>1</td>
+                                    <td>$26.00</td>
+                                    <td>$5.98</td>
+                                    <td>$31,98</td>
+                                </tr>
+                                <tr>
+                                    <td><div><strong>Wodpress Them customization</strong></div>
+                                        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            Eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </small></td>
+                                    <td>2</td>
+                                    <td>$80.00</td>
+                                    <td>$36.80</td>
+                                    <td>$196.80</td>
+                                </tr>
+                                <tr>
+                                    <td><div><strong>Angular JS &amp; Node JS Application</strong></div>
+                                        <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></td>
+                                    <td>3</td>
+                                    <td>$420.00</td>
+                                    <td>$193.20</td>
+                                    <td>$1033.20</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div><!-- /table-responsive -->
+
+                        <table class="table invoice-total">
+                            <tbody>
+                            <tr>
+                                <td><strong>Sub Total :</strong></td>
+                                <td>$1026.00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>TAX :</strong></td>
+                                <td>$235.98</td>
+                            </tr>
+                            <tr>
+                                <td><strong>TOTAL :</strong></td>
+                                <td>$1261.98</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="text-right">
+                            <button class="btn btn-primary"><i class="fa fa-dollar"></i> Make A Payment</button>
+                        </div>
+
+                        <div class="well m-t"><strong>Comments</strong>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </br></br>
+
+        <div class="footer">
+            <div class="float-right">
+                <strong>Copyright Ecopack Services © 2019</strong>
+            </div>
+            <div>
+                <strong>With <i class="fa fa-heart" aria-hidden="true" style="color:deeppink;"></i>  Designed &amp; Developed By
+                    <a href="http://www.aashvitech.com" title="Aashvi Innovations Pvt. Ltd." target="_blank">
+                        : Aashvi Innovations Pvt. Ltd.</a>
+                </strong>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/jquery-2.1.1.js"></script>
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/popper.min.js"></script>
+
+<!--script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/jquery-2.1.1.js"></script-->
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/bootstrap.js"></script>
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/inspinia.js"></script>
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/plugins/pace/pace.min.js"></script>
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- jQuery UI -->
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="192.168.0.11/2020/Jan/20-01-2020/Ecopack/assets/js/validate.js"></script>
+
+<!-- GITTER -->
+<!--   -->

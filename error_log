@@ -1,0 +1,23 @@
+[20-Jun-2024 15:45:39 Asia/Kolkata] PHP Fatal error:  Call to a member function result_array() on null in /home/z2v1ltz34mar/public_html/application/models/Mdl_ledger.php on line 170
+[30-Dec-2024 17:39:14 Asia/Kolkata] PHP Fatal error:  Call to a member function result_array() on null in /home/z2v1ltz34mar/public_html/application/models/Mdl_ledger.php on line 170
+[30-Dec-2024 17:39:17 Asia/Kolkata] PHP Fatal error:  Call to a member function result_array() on null in /home/z2v1ltz34mar/public_html/application/models/Mdl_ledger.php on line 170
+[30-Dec-2024 17:39:25 Asia/Kolkata] PHP Fatal error:  Call to a member function result_array() on null in /home/z2v1ltz34mar/public_html/application/models/Mdl_ledger.php on line 170
+[04-Jan-2025 16:34:17 Asia/Kolkata] PHP Fatal error:  Call to a member function result_array() on null in /home/z2v1ltz34mar/public_html/application/models/Mdl_ledger.php on line 170
+[15-Feb-2025 11:38:06 Asia/Kolkata] PHP Fatal error:  Call to a member function result_array() on null in /home/z2v1ltz34mar/public_html/application/models/Mdl_ledger.php on line 170
+[10-Mar-2025 10:44:44 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:21 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:28 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:33 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:33 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:33 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:33 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:34 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:34 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:34 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:34 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:45:36 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecpack.php on line 30
+[10-Mar-2025 10:46:06 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecopack.php on line 30
+[10-Mar-2025 10:46:46 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/z2v1ltz34mar/public_html/dbbackupecopack.php on line 30
+[10-Mar-2025 10:59:27 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/z2v1ltz34mar/public_html/dbbackupecopack.php on line 66
+[10-Mar-2025 10:59:33 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/z2v1ltz34mar/public_html/dbbackupecopack.php on line 66
+[10-Mar-2025 11:15:18 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/z2v1ltz34mar/public_html/dbbackupecopack.php on line 66
