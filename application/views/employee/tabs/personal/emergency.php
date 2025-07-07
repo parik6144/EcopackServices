@@ -59,6 +59,17 @@ $encrypted_staff_id = isset($employee_data['master_data']['staff_id']) ? encrypt
 		</div>
 	</fieldset>
 
+	<div class="residing-radio-group">
+		<input type="radio" name="residing_with_employee" id="residing_yes" value="Yes">
+		<label for="residing_yes">Yes</label>
+		<input type="radio" name="residing_with_employee" id="residing_no" value="No">
+		<label for="residing_no">No</label>
+		<span id="residing_with_employee_label">Residing With Employee *</span>
+	</div>
+	<div id="residing_with_employee_error_wrapper">
+		<div class="form-error" id="error_residing_with_employee"></div>
+	</div>
+
 	<div class="d-flex justify-content-start gap-2 mt-3">
 		<button type="submit" class="btn btn-success">Save Emergency Data</button>
 		<button type="button" class="btn btn-warning reset-tab-form">Reset</button>

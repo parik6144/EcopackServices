@@ -378,10 +378,14 @@ class Mdl_employee extends CI_Model {
 	 * @return bool True on success, false on failure.
 	 */
 	public function sync_family_records($employee_id, $records) {
+		// Get staff_id from employee_profile
+		$profile = $this->db->select('staff_id')->from('employee_profile')->where('employee_id', $employee_id)->get()->row();
+		$staff_id = $profile ? $profile->staff_id : null;
 		$mapped_records = [];
 		foreach ($records as $rec) {
 			$mapped_records[] = [
 				'employee_id' => $employee_id,
+				'staff_id' => $staff_id,
 				'first_name' => $rec['firstName'] ?? null,
 				'middle_name' => $rec['middleName'] ?? null,
 				'last_name' => $rec['lastName'] ?? null,

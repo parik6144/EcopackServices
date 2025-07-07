@@ -567,6 +567,10 @@ class Employee extends CI_Controller
 				echo json_encode(['status' => 'error', 'message' => 'Failed to sync Family Records.']);
 				return;
 			}
+			// Success response for SweetAlert2
+			$this->db->trans_commit();
+			echo json_encode(['status' => 'success', 'message' => 'Employee family details saved successfully!']);
+			return;
 		}
 
 		// Nomination Records
@@ -1315,5 +1319,16 @@ class Employee extends CI_Controller
 	}
 	public function save() {
 		echo json_encode(['status' => 'error', 'message' => 'This method is deprecated.']);
+	}
+
+	public function log_family_form_activity() {
+		$logDir = APPPATH . 'logs/';
+		if (!is_dir($logDir)) mkdir($logDir, 0777, true);
+		$date = date('Y-m-d');
+		$logFile = $logDir . 'form_validation_' . $date . '.log';
+		$logData = $this->input->post('log');
+		$entry = '[' . date('Y-m-d H:i:s') . '] ' . $logData . "\n";
+		file_put_contents($logFile, $entry, FILE_APPEND);
+		echo json_encode(['status' => 'success']);
 	}
 }

@@ -1,3 +1,350 @@
 /* assets/css/employee/personal_family.css */
-/* Add styles specific to the Personal Family sub-tab here. */
-/* Currently empty as common styles are in employee_form.css. */
+
+/* General Page Layout & Container */
+.employee-family-container {
+  padding: 20px !important;
+  background-color: #f8f9fa !important;
+  min-height: calc(100vh - 60px) !important; /* Adjust based on your header/footer height */
+  box-sizing: border-box !important;
+}
+
+.page-title {
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: #343a40 !important;
+  margin-bottom: 25px !important;
+  border-bottom: 2px solid #e9ecef !important;
+  padding-bottom: 15px !important;
+  box-sizing: border-box !important;
+}
+
+/* Custom Card Styles (mimicking Bootstrap's card) */
+.card-custom {
+  background-color: #fff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+  overflow: hidden !important;
+  margin-bottom: 20px !important;
+  box-sizing: border-box !important;
+}
+
+.card-header-custom {
+  background-color: #f0f2f5 !important;
+  padding: 1rem 1.5rem !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #343a40 !important;
+  border-bottom: 1px solid #e9ecef !important;
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+.card-body-custom {
+  padding: 1.5rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Fieldset (now without border, inside card body) */
+.fieldset-no-border {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.fieldset-no-border legend {
+  display: none !important;
+}
+
+/* Form Row & Group Styling */
+.form-row.family-form-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  margin-bottom: 10px !important;
+  box-sizing: border-box !important;
+}
+
+.family-form-row .form-group {
+  flex: 1 1 calc(25% - 20px) !important;
+  min-width: 200px !important;
+  margin-bottom: 0 !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+/* Floating Label Styles (MAXIMUM SPECIFICITY) */
+.form-floating {
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+.form-floating > .form-control,
+.form-floating > .form-select {
+  height: calc(3.5rem + 2px) !important; /* Standard Bootstrap 5 height */
+  padding: 1.625rem 0.75rem 0.625rem 0.75rem !important; /* Top padding for label, bottom for text */
+  line-height: 1.25 !important;
+  border-radius: 0.375rem !important;
+  border: 1px solid #ced4da !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  background-color: #fff !important;
+  font-size: 1rem !important;
+  color: #495057 !important;
+  box-shadow: none !important; /* Remove any default box-shadow */
+  outline: none !important; /* Remove default outline */
+}
+
+.form-floating > label {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 100% !important;
+  padding: 1rem 0.75rem !important; /* Matches input padding */
+  pointer-events: none !important;
+  transform-origin: 0 0 !important;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out !important;
+  color: #6c757d !important;
+  font-size: 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  background-color: transparent !important; /* Ensure no background conflicts when static */
+  box-sizing: border-box !important;
+}
+
+/* When input is focused or has content, shrink and move label up */
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem) !important;
+  opacity: 0.75 !important;
+  background-color: #fff !important; /* Ensure label background matches input background when floating */
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 0.25rem !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+/* Hide placeholder when label is floating up */
+.form-floating > .form-control:focus::placeholder,
+.form-floating > .form-control:not(:placeholder-shown)::placeholder {
+opacity: 0 !important;
+}
+
+/* Validation Styles */
+.form-control.is-invalid {
+border-color: #dc3545 !important; /* Bootstrap error red */
+padding-right: calc(1.5em + 0.75rem) !important;
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e") !important;
+background-repeat: no-repeat !important;
+background-position: right calc(0.375em + 0.1875rem) center !important;
+background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+}
+
+.form-error {
+color: #dc3545 !important;
+font-size: 0.825rem !important;
+margin-top: 5px !important;
+min-height: 18px !important;
+display: block !important;
+box-sizing: border-box !important;
+}
+
+/* Radio Button Group Styling */
+.residing-radio-group {
+  display: flex !important;
+  flex-direction: column !important; /* Stack label and radios vertically */
+  align-items: flex-start !important; /* Align text to left */
+  gap: 8px !important;
+  margin-bottom: 0 !important;
+  width: 100% !important;
+  padding-left: 0.75rem !important; /* Align with input fields */
+  box-sizing: border-box !important;
+}
+#residing_with_employee_label {
+  margin-bottom: 0.5rem !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  color: #343a40 !important;
+  line-height: 1.25 !important;
+  padding-top: 0.25rem !important;
+  box-sizing: border-box !important;
+}
+.form-check-inline {
+  margin-right: 1.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+.form-check-label {
+  margin-bottom: 0 !important;
+  font-weight: 400 !important;
+  color: #495057 !important;
+  box-sizing: border-box !important;
+}
+.form-check-input {
+  margin-top: 0.3rem !important;
+  box-sizing: border-box !important;
+}
+
+#residing_with_employee_error_wrapper {
+margin-top: 2px !important;
+min-height: 18px !important;
+width: 100% !important;
+box-sizing: border-box !important;
+}
+#residing_with_employee_error_wrapper .form-error {
+color: #dc3545 !important;
+font-size: 0.825rem !important;
+display: block !important;
+}
+
+
+/* Table Styling */
+#familyRecordsTable {
+width: 100% !important;
+border-collapse: collapse !important;
+margin-top: 1rem !important;
+font-size: 0.95rem !important;
+box-sizing: border-box !important;
+}
+
+#familyRecordsTable th,
+#familyRecordsTable td {
+padding: 12px 15px !important;
+border: 1px solid #e9ecef !important;
+text-align: left !important;
+box-sizing: border-box !important;
+}
+
+#familyRecordsTable thead th {
+background-color: #e9ecef !important;
+font-weight: 600 !important;
+color: #495057 !important;
+border-bottom: 2px solid #dee2e6 !important;
+box-sizing: border-box !important;
+}
+
+#familyRecordsTable tbody tr:nth-child(even) {
+background-color: #fdfdfe !important;
+}
+
+#familyRecordsTable tbody tr:hover {
+background: #e9f7ff !important;
+cursor: default !important;
+}
+
+/* Button Styling */
+.btn {
+padding: 0.75rem 1.5rem !important;
+border-radius: 0.375rem !important;
+font-size: 1rem !important;
+font-weight: 500 !important;
+cursor: pointer !important;
+transition: all 0.2s ease-in-out !important;
+display: inline-flex !important;
+align-items: center !important;
+gap: 8px !important;
+box-sizing: border-box !important;
+}
+
+.btn-primary {
+background-color: #007bff !important;
+border-color: #007bff !important;
+color: #fff !important;
+}
+.btn-primary:hover {
+background-color: #0056b3 !important;
+border-color: #004085 !important;
+}
+
+.btn-success {
+background-color: #28a745 !important;
+border-color: #28a745 !important;
+color: #fff !important;
+}
+.btn-success:hover {
+background-color: #1e7e34 !important;
+border-color: #1c7430 !important;
+}
+
+.btn-secondary {
+background-color: #6c757d !important;
+border-color: #6c757d !important;
+color: #fff !important;
+}
+.btn-secondary:hover {
+background-color: #5a6268 !important;
+border-color: #545b62 !important;
+}
+
+.btn-danger {
+background-color: #dc3545 !important;
+border-color: #dc3545 !important;
+color: #fff !important;
+}
+.btn-danger:hover {
+background-color: #c82333 !important;
+border-color: #bd2130 !important;
+}
+.btn-sm {
+  padding: 0.4rem 0.8rem !important;
+  font-size: 0.875rem !important;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .family-form-row .form-group {
+      flex: 1 1 calc(33.333% - 20px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .family-form-row .form-group {
+      flex: 1 1 calc(50% - 20px) !important;
+  }
+  .card-header-custom {
+      font-size: 1.1rem !important;
+      padding: 0.8rem 1rem !important;
+  }
+  .card-body-custom {
+      padding: 1rem !important;
+  }
+  .btn {
+      padding: 0.6rem 1.2rem !important;
+      font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .family-form-row {
+      flex-direction: column !important;
+      gap: 15px !important;
+  }
+  .family-form-row .form-group {
+      min-width: 100% !important;
+      flex: 1 1 100% !important;
+  }
+  .page-title {
+      font-size: 1.5rem !important;
+      margin-bottom: 20px !important;
+      padding-bottom: 10px !important;
+  }
+  .employee-family-container {
+      padding: 15px !important;
+  }
+  .residing-radio-group {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 5px !important;
+  }
+  #residing_with_employee_label {
+      margin-bottom: 0.25rem !important;
+      margin-left:50px !important;
+  }
+  .form-check-inline {
+      margin-right: 0.5rem !important;
+  }
+}
