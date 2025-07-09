@@ -69,19 +69,14 @@ $encrypted_staff_id = isset($employee_data['master_data']['staff_id']) ? encrypt
                             <label for="family_contact_no">Contact No.</label>
                             <div class="form-error" id="error_family_contact_no"></div>
                         </div>
-                        <div class="form-group col-md-3 d-flex align-items-center">
-                            <div class="residing-radio-group">
-                                <label id="residing_with_employee_label">Residing with Employee *</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="residing_with_employee" id="residing_yes" value="Yes" required>
-                                    <label class="form-check-label" for="residing_yes">Yes</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="residing_with_employee" id="residing_no" value="No" required>
-                                    <label class="form-check-label" for="residing_no">No</label>
-                                </div>
-                            </div>
-                            <div class="form-error" id="residing_with_employee_error_wrapper"></div>
+                        <div class="form-group col-md-3 form-floating">
+                            <select class="form-control" id="residing_with_employee" name="residing_with_employee" required>
+                                <option value="" selected disabled>Residing With Employee *</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                            <label for="residing_with_employee">Residing With Employee *</label>
+                            <div class="form-error" id="error_residing_with_employee"></div>
                         </div>
                     </div>
                     <div class="form-row family-form-row">
@@ -141,6 +136,7 @@ $encrypted_staff_id = isset($employee_data['master_data']['staff_id']) ? encrypt
                                 <th>DOB</th>
                                 <th>Contact No</th>
                                 <th>Dependent</th>
+                                <th>Residing With Employee</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -156,6 +152,7 @@ $encrypted_staff_id = isset($employee_data['master_data']['staff_id']) ? encrypt
                                     echo "<td>" . htmlspecialchars($record['family_dob']) . "</td>";
                                     echo "<td>" . htmlspecialchars($record['family_contact_no']) . "</td>";
                                     echo "<td>" . htmlspecialchars($record['family_is_dependent']) . "</td>";
+                                    echo "<td>" . htmlspecialchars($record['residing_with_employee'] ?? '') . "</td>";
                                     // You might need a way to pass the actual ID for deletion from the DB
                                     echo "<td><button type='button' class='btn btn-danger btn-sm delete-family-record' data-family-id='" . htmlspecialchars($record['id']) . "'>Delete</button></td>";
                                     echo "</tr>";
@@ -259,10 +256,8 @@ $encrypted_staff_id = isset($employee_data['master_data']['staff_id']) ? encrypt
             }
         });
 
-        document.querySelectorAll('input[name="residing_with_employee"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                validateField('residing_with_employee', 'Please select an option.');
-            });
+        document.getElementById('residing_with_employee').addEventListener('change', function() {
+            validateField('residing_with_employee', 'Please select an option.');
         });
 
         function validateFormForAdd() {
@@ -302,7 +297,7 @@ $encrypted_staff_id = isset($employee_data['master_data']['staff_id']) ? encrypt
             const familyGender = document.getElementById('family_gender').value;
             const familyDob = document.getElementById('family_dob').value;
             const familyContactNo = document.getElementById('family_contact_no').value;
-            const residingWithEmployee = document.querySelector('input[name="residing_with_employee"]:checked')?.value || '';
+            const residingWithEmployee = document.getElementById('residing_with_employee').value;
             const familyIsDependent = document.getElementById('family_is_dependent').value;
             const familyAddressLine1 = document.getElementById('family_address_line1').value;
             const familyAddressLine2 = document.getElementById('family_address_line2').value;
@@ -317,6 +312,7 @@ $encrypted_staff_id = isset($employee_data['master_data']['staff_id']) ? encrypt
                 <td>${familyDob}</td>
                 <td>${familyContactNo}</td>
                 <td>${familyIsDependent}</td>
+                <td>${residingWithEmployee}</td>
                 <td>
                     <button type="button" class="btn btn-danger btn-sm delete-dynamic-record"><i class="fas fa-trash-alt"></i> Delete</button>
                 </td>
@@ -341,7 +337,7 @@ $encrypted_staff_id = isset($employee_data['master_data']['staff_id']) ? encrypt
 
             form.reset();
             requiredFields.forEach(fieldId => clearError(fieldId));
-            clearError('residing_with_employee_error_wrapper');
+            clearError('residing_with_employee');
             form.classList.remove('was-validated');
 
             newRow.querySelector('.delete-dynamic-record').addEventListener('click', function() {
